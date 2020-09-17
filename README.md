@@ -4,6 +4,19 @@
 
 使用示例：[canal-annotation-drive-example](https://github.com/madmk/canal-annotation-drive-example)
 
+[点击下载](https://github.com/madmk/canal-annotation-drive/releases
+) madmk.zip 解压在 mevan 依赖下面即可通过mevan引用使用
+
+pom:
+```xml
+        <dependency>
+            <groupId>com.madmk</groupId>
+            <artifactId>canal-annotation-drive</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+```
+
+java:
 ```java
     public static void main(String[] args) throws Exception {
         // 创建配置
@@ -15,6 +28,5 @@
         // 启动成功
     }
 ```
-
 
 
