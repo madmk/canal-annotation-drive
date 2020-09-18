@@ -28,5 +28,7 @@ java:
         // 启动成功
     }
 ```
-
-
+1. 被 `@Dispatcher` 注释的类必须至少有一个无参构造函数 （可通过自定义`DispatcherFactory.java`突破此限制，比如与spring 整合时想使用spring的Bean）
+2. 被 `@Worker` 注释的方法的参数 类型 只允许为`CanalEntry.Entry`、`CanalEntry.RowChange`、`CanalEntry.Header`顺序不限。
+3. 异常处理 可通过自定义 `FailureHandle.java` 实现
+4. 数据库消息为顺序消费，但如果一条消息同时满足多个`@Worker`则`@Worker`将同时执行，全部执行完成后继续消费下一条消息
